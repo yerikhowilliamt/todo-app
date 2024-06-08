@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="logo icon" type="x-icon" href="image/logo.png">
+  <script src="script.js" defer></script>
+  <title>My To-Do List App</title>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="image/logo.png" alt="logo">
+      <h1>My To-do List App</h1>
+    </div>
+    <div class="profile-container">
+      <h5>PROFILE</h5>
+      <div class="profile-content">
+        <form action="">
+          <div class="profile-nama">
+            <h6>NAMA : <input type="text" name="nama" id="nama"></h6>
+          </div>
+          <div class="profile-jabatan">
+            <h6>JABATAN : <input type="text" name="jabatan" id="jabatan"></h6>
+          </div>
+        </form>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section id="user">
+      
+    </section>
+    <section id="addTodo"> 
+      <form action="" id="todoForm">
+        <div class="add-container">
+          <h2>TAMBAH TO-DO BARU :</h2>
+          <div class="add-content">
+            <div class="add-task">
+              <h6>TO-DO :</h6>
+              <input type="text" name="taskInput" id="inputTask" placeholder="Tambah to-do baru" required>
+            </div>
+            <div class="add-level">
+              <h6>Level Prioritas :</h6>
+              <label for="level">
+                <select name="level" id="selectLevel" required>
+                  <option value="" selected disabled>Pilih Level</option>
+                  <option value="Low">Low</option>
+                  <option value="Medium">Medium</option>
+                  <option value="High">High</option>
+                </select>
+              </label>
+            </div>
+            <div class="btn-add">
+              <button type="submit" class="add-btn">TAMBAH</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
+    <section id="todo">
+      <form action="">
+        <div class="todo-container">
+          <div class="todo-header">
+            <div class="todo-header-title">
+              <img src="/image/task list.png" alt="icon">
+              <h2>TO-DO LIST :</h2>
+            </div>
+          </div>
+          <div class="todo-content">
+            <ul class="todo-list">
+            </ul>
+          </div>
+        </div>
+      </form>
+    </section>
+    <section id="done">
+      <form action="">
+        <div class="done-container">
+          <div class="done-header">
+            <div class="done-header-title">
+              <img src="/image/task done.png" alt="icon">
+              <h2>DONE LIST:</h2>
+            </div>
+          </div>
+          <div class="done-content">
+            <ul class="done-list">
+            </ul>
+          </div>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

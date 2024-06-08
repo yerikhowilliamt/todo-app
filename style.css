@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #151515;
+}
+
+/* HEADER SECTION */
+
+header {
+  padding: .4em;
+  background-color: #2A2A2A;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  width: 24rem;
+  height: 5rem;
+  padding: .5em;
+  display: flex;
+  align-items: center;
+}
+
+.logo-container h1 {
+  font-family: "Teko", sans-serif;
+  color: #039EDC;
+}
+
+.logo-container img {
+  height: 100%;
+}
+
+.profile-container {
+  border: 1px solid rgba(231, 227, 252, 0.23);
+  border-radius: .3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: .4em;
+  color: #FFF;
+  background-color: #039EDC;
+}
+
+.profile-content {
+  display: flex;
+  width: 100%;
+  padding: .2rem;
+  margin-top: .5rem;
+}
+
+.profile-nama {
+  margin-bottom: .7rem;
+}
+
+.profile-nama,
+.profile-jabatan {
+  border-bottom: 2px solid #2A2A2A;
+}
+
+.profile-nama input,
+.profile-jabatan input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  height: 1.8em;
+  font-weight: 700;
+  color: #FFF;
+  margin-left: .2rem;
+}
+
+/* HEADER SECTION END */
+
+/* MAIN SECTION */
+
+main {
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 2rem;
+}
+
+.add-content {
+  gap: 2rem;
+  border: 1px solid #151515;
+  align-items: center;
+  background-color: #FFF;
+}
+
+.add-content h6{
+  font-size: 1rem;
+}
+
+.add-task,
+.add-level {
+  border: 1px solid #151515;
+  background-color: #039EDC;
+  border-radius: .5rem;
+  padding: .7rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.add-task input,
+.add-level label {
+  background-color: #FFF;
+  border: 1px solid #151515;
+  border-radius: .5rem;
+  text-align: center;
+  height: 2rem;
+  min-width: 15rem;
+}
+
+.add-level select {
+  width: 100%;
+  height: 100%;
+  border-radius: .5rem;
+  border: none;
+}
+
+select {
+  font-size: 1rem;
+}
+
+.add-task input::placeholder {
+  color: #2A2A2A;
+  opacity: 75%;
+}
+
+.add-content button {
+  background-color: #039EDC;
+  border: 1px solid #151515;
+  border-radius: .7rem;
+  padding: .7rem;
+  font-size: 1rem;
+  color: #FFF;
+  font-weight: 700;
+}
+
+
+.add-container,
+.todo-container,
+.done-container {
+  border: 1px solid #151515;
+  border-radius: 1rem;
+  background-color: #039EDC;
+  align-items: center;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.todo-container h2,
+.done-container h2 {
+  font-family: "Teko", sans-serif;
+  font-size: 3.5rem;
+}
+
+.todo-header,
+.done-header {
+  display: flex;
+  border-bottom: 2px solid #151515;
+  width: 100%;
+  padding: .5rem;
+}
+
+.todo-header-title,
+.done-header-title {
+  display: flex;
+  gap: 1rem;
+}
+
+.todo-header-title img,
+.done-header-title img {
+  width: 4.5rem;
+}
+
+.done-list,
+.todo-content,
+.add-content {
+  display: flex;
+  border-radius: .5rem;
+  padding: .5rem;
+}
+
+.todo-list,
+.done-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.todo-list li,
+.done-list li {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-list li.complete .todos {
+  background-color: #79BCD7;
+}
+
+.todo-list li.complete .task,
+.todo-list li.complete .level,
+.todo-list li.complete .date,
+.todo-list li.complete .deadline {
+  background-color: #79BCD7;
+  text-decoration: line-through;
+  color: #2A2A2A;
+}
+
+.todo-list li.complete .delete-task {
+  background-color: #b83e3e;
+}
+
+.todos,
+.dones {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .5rem;
+  border: 1px solid #151515;
+  border-radius: .5rem;
+  background-color: #FFF;
+}
+
+.todos h6,
+.dones h6 {
+  font-family: "Teko", sans-serif;
+  font-size: 1.5rem;
+}
+
+.delete-task {
+  min-width: 4rem;
+  padding: .5rem;
+  background-color: #C00000;
+  border: 1px solid #151515;
+  border-radius: .3rem;
+  cursor: pointer;
+  color: #FFF;
+}
+
+.todos button:hover,
+.dones button:hover {
+  transform: scale(1.05);
+  transition: all .3s ease-in-out;
+}
+
+.task-container {
+  display: flex;
+  text-align: center;
+  gap: 1rem;
+}
+
+.task-container span {
+  font-weight: 700;
+}
+
+.task,
+.level,
+.date {
+  min-width: 10rem;
+  border: 1px solid #151515;
+  padding: .3rem;
+  border-radius: .5rem;
+  background-color: #039EDC;
+}
+
+.task h6,
+.level h6,
+.date h6 {
+  font-family: "Teko", sans-serif;
+  font-size: 1.5rem;
+}
+
+.task span,
+.level span,
+.date span {
+  font-family: "Montserrat", sans-serif;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  background-color: transparent;
+  margin: 0;
+  max-width: 2rem;
+  max-height: 2rem;
+  border: 2px solid #151515;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: url(image/checked.png);
+  transform: scale(0);
+  transition: all .3s ease-in-out;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #039EDC;
+  border-color: #79BCD7;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(.05);
+}
+
+/* MAIN SECTION END */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 60%;
+  }
+
+  header {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  header h1 {
+    
+  }
+
+  header .profile-container {
+    width: 50%;
+  }
+
+  .profile-nama {
+    width: 18rem;
+  }
+
+  .profile-nama input {
+    width: 83%;
+  }
+
+  .profile-jabatan input {
+    width: 77%;
+  }
+
+  .add-content {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .add-task input,
+  .add-level label {
+    height: 3rem;
+    width: 25rem;
+  }
+
+  .btn-add button {
+    width: 15rem;
+    font-size: 2rem;
+    padding: 1rem;
+  }
+
+  #todo {
+    padding: 0;
+  }
+
+  .todo-content {
+    padding: 0;
+  }
+
+  .todos {
+    max-width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+  }
+
+  .task,
+  .level,
+  .date,
+  .delete-task {
+    max-width: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: .3rem;
+  }
+
+  input[type="checkbox"] {
+    margin-bottom: .5rem;
+  }
+
+  .delete-task {
+    max-width: 7rem;
+    margin-left: 26rem;
+    margin-top: .5rem;
+  }
+}
