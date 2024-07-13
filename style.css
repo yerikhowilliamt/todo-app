@@ -203,13 +203,18 @@ select {
   width: 40%;
 }
 
+#selectLevel {
+  text-align: center;
+  font-weight: bold;
+}
+
 .todo-content,
 .done-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 .todo-list,
@@ -315,33 +320,6 @@ select {
   font-family: "Montserrat", sans-serif;
 }
 
-input[type="checkbox"] {
-  appearance: none;
-  background-color: transparent;
-  margin: 0;
-  max-width: 2rem;
-  max-height: 2rem;
-  border: 2px solid #151515;
-  border-radius: 50%;
-  display: grid;
-  place-content: center;
-}
-
-input[type="checkbox"]::before {
-  content: url(image/checked.png);
-  transform: scale(0);
-  transition: all 0.3s ease-in-out;
-}
-
-input[type="checkbox"]:checked {
-  background-color: #039edc;
-  border-color: #79bcd7;
-}
-
-input[type="checkbox"]:checked::before {
-  transform: scale(0.05);
-}
-
 /* MAIN SECTION END */
 @media screen and (max-width: 768px) {
   html {
@@ -395,7 +373,8 @@ input[type="checkbox"]:checked::before {
     padding: 0;
   }
 
-  .todos {
+  .todos,
+  .dones {
     max-width: 100%;
     padding: 1rem;
     display: flex;
@@ -424,5 +403,10 @@ input[type="checkbox"]:checked::before {
     max-width: 7rem;
     margin-left: 26rem;
     margin-top: 0.5rem;
+  }
+
+  #todo,
+  #done {
+    width: 100%;
   }
 }
